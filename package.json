@@ -1,0 +1,30 @@
+{
+  "name": "mcp_ranking",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/server.ts",
+    "build": "tsc",
+    "inspector:run:dev": "npx @modelcontextprotocol/inspector pnpm dev",
+    "inspector:run:build": "pnpm build && npx @modelcontextprotocol/inspector node build/server.js",
+    "inspector:run:config": "npx @modelcontextprotocol/inspector --config mcp.json --server mcp_ranking",	
+    "inspector:cli:list-tools": "npx @modelcontextprotocol/inspector --cli tsx src/server.ts --method tools/list",
+    "inspector:cli:call-tool": "npx @modelcontextprotocol/inspector --cli tsx src/server.ts --method tools/call --tool-name get_top_sellers --input '{\"limit\": 3}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@modelcontextprotocol/server": "2.0.0-alpha.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}

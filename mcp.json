@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+      "mcp_ranking": {
+        "command": "tsx",
+        "args": ["src/server.ts"]
+      }
+    }
+}
