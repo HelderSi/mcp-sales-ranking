@@ -5,7 +5,7 @@ import { getTopSellers } from "./tools/getTopSellers";
 
 const server = new McpServer({
   version: "1.0.0",
-  name: "SalesRanking",
+  name: "SalesRankingServer",
   description: "Ranking of sellers"
 });
 
